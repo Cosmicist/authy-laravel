@@ -30,6 +30,11 @@ class AuthyLaravelServiceProvider extends ServiceProvider {
     {
         $this->app->singleton('Authy_Api', function($app)
         {
+            if (!class_exists("Resty"))
+            {
+                require base_path('vendor/resty/resty/Resty.php');
+            }
+
             $sandbox = (bool) $app->config['authy-laravel::sandbox'];
 
             $api_key = $app->config['authy-laravel::'.($sandbox ? 'sandbox_' : '') . 'api_key'];
