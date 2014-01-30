@@ -1,0 +1,26 @@
+{
+    "name": "flatline/authy-laravel",
+    "description": "",
+    "authors": [
+        {
+            "name": "Luciano Longo",
+            "email": "luciano.longo@studioignis.net",
+            "homepage": "http://studioignis.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.1.*",
+        "authy/php": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations",
+            "vendor/resty"
+        ],
+        "psr-0": {
+            "Flatline\\AuthyLaravel\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
