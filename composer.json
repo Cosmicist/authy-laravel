@@ -15,8 +15,7 @@
     },
     "autoload": {
         "classmap": [
-            "src/migrations",
-            "vendor/resty"
+            "src/migrations"
         ],
         "psr-0": {
             "Flatline\\AuthyLaravel\\": "src/"
